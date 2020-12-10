@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício de manipulação de DOM</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1>Exercício de manipulação de DOM</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <label>Nome</label>
+          <input type="text" id="txtNome" class="form-control" />
+        </div>
+        <div class="col-2">
+          <label>Idade</label>
+          <input type="text" name="txtIdade" class="form-control" />
+        </div>
+        <div class="col-2">
+          <label>Sexo</label>
+          <select class="form-control select-sexo">
+            <option value="">Prefiro não informar</option>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="O">Outro</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chkEmails" />
+            <label class="form-check-label" for="chkEmails"
+              >Quero receber emails</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <button class="btn btn-secondary">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("txtNome").maxLength = 100;
+      document.getElementsByName("txtIdade")[0].value = "18";
+      document.getElementsByClassName("select-sexo")[0].value = "F";
+      document.getElementById("chkEmails").checked = true;
+
+      let botao = document.getElementsByClassName("btn")[0];
+      let classeBotao = botao.className;
+      classeBotao = classeBotao.replaceAll("btn-secondary", "btn-primary");
+      botao.className = classeBotao;
+      
+    </script>
+  </body>
+</html>
