@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Número primos</title>
+  </head>
+  <body>
+    <script>
+      function imprimeNumerosPrimos() {
+        for (let numero = 2; numero <= 50; numero++) {
+          let ehPrimo = true;
+          for (let divisor = numero; divisor > 0; divisor--) {
+            if (divisor != numero && divisor != 1) {
+              let restoDivisao = numero % divisor;
+              if (restoDivisao == 0) {
+                ehPrimo = false;
+              }
+            }
+          }
+
+          if (ehPrimo) {
+            console.log("Número primo: " + numero);
+          }
+        }
+      }
+
+      imprimeNumerosPrimos();
+    </script>
+  </body>
+</html>

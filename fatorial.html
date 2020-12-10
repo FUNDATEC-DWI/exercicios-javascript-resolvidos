@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatorial</title>
+  </head>
+  <body>
+    <script>
+      function fatorial(numero) {
+        let fatorialCalculado = 1;
+
+        for (let n = numero; n >= 1; n = n - 1) {
+          fatorialCalculado = fatorialCalculado * n;
+          console.log("Fatorial parcial: " + fatorialCalculado);
+          console.log("passou no laço: " + n);
+        }
+
+        return fatorialCalculado;
+      }
+
+      console.log(fatorial(4)); //24
+      console.log(fatorial(6)); //720
+    </script>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div id="bla">TEXTO</div>
+              <input type="text" name="txtEmail" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
